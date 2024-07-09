@@ -9,18 +9,18 @@ export default function Nav() {
   return (
     <nav className="flex justify-between items-center py-10">
       <Link href="/">
-        <button className="text-lg font-medium">Creative Minds</button>
+        <button className="text-lg font-medium">Bloggy 🤪</button>
       </Link>
       <ul className="flex items-center gap-10">
         {!user && (
-          <li className="py-2 px-4 text-sm bg-cyan-500 text-white rounded-lg font-medium">
+          <li className="py-2 px-4 text-sm bg-cyan-500 text-white font-medium rounded-lg ">
             <Link href="/auth/login">Join Now</Link>
           </li>
         )}
         {user && (
           <div className="flex item-center gap-6">
             <Link href="/post">
-              <button className="font-medium bg-cyan-500 text-white py-2 px-4 rounded-mg textx-small">
+              <button className="font-medium bg-cyan-500 text-white py-2 px-4 rounded-full text-lg">
                 Post
               </button>
             </Link>
