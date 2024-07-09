@@ -51,16 +51,16 @@ export default function Dashboard() {
         {posts.map((post) => {
           return (
             <Message {...post} key={post.id}>
-              <div className="flex gap-4">
+              <div className="flex gap-12">
                 <button
                   onClick={() => deletePost(post.id)}
-                  className="text-pink-600 flex items-center justify-center gap-2 py-2 text-sm"
+                  className="text-pink-600 flex items-center justify-center gap-2 py-2 -mx-4 px-4 text-sm rounded-lg bg-red-100 "
                 >
                   <BsTrash2Fill className="text-2xl" />
                   Delete
                 </button>
                 <Link href={{ pathname: "/post", query: post }}>
-                  <button className="text-teal-600 flex items-center justify-center gap-2 py-2 text-sm">
+                  <button className="text-teal-600 flex items-center justify-center gap-2 py-2 -mx-4 px-4 text-sm rounded-lg bg-green-100 ">
                     <AiFillEdit className="text-2xl" /> Edit
                   </button>
                 </Link>
@@ -70,7 +70,7 @@ export default function Dashboard() {
         })}
       </div>
       <button
-        className="font-medium text-white bg-gray-800 py-2 px-4 rounded-lg my-6"
+        className="font-medium text-white bg-gray-800 py-2 px-4 rounded-lg my-6 hover:bg-gray-200 hover:text-gray-800"
         onClick={() => {
           auth.signOut();
         }}
